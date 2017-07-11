@@ -1,0 +1,432 @@
+html, body {
+   text-shadow: 0px 0px 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  color: black;
+}
+h3{
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.badge-notify{
+   background:red;
+   position:relative;
+   top: -50px;
+   left: 30px;
+   border-radius: 50%;
+   box-shadow: 0 0 0 4px white, inset 0 1px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.ui-header{
+  border: 0px;
+}
+#menu-list{
+  /*background-image:-webkit-gradient(linear,left top,left bottom,from( #f28740 ),to( #ea7323 ));*/
+  /*background-color: #223E4A;*//*very dark gray*/
+  background-color: #2c323c;
+  color: white;
+  text-shadow: 0px 0px 0px;
+  border-color: #626368;
+}
+#car-request-button{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: white;
+  text-shadow: 0px 0px 0px;
+  color: white;
+}
+#cancle-button{
+  /*background-color:#ff6666;*/
+  background-color: #F34445;
+  border-color: #F34445;
+  text-shadow: 0px 0px 0px;
+  color: white;
+}
+#agree-button{
+  background-color:#3BB67D;
+  border-color: #3BB67D;
+  text-shadow: 0px 0px 0px;
+  color: white;
+}
+#login-button{
+  background-color: #ea7323;
+  border: #ea7323;
+  color:white;
+  font-color: white;
+  text-shadow: 0px 0px 0px;
+}
+#facebook{
+  background-color: #3b5998;
+  border: #3b5998;
+  color:white;
+  font-color: white;
+  text-shadow: 0px 0px 0px;
+}
+#google{
+  /*background-color: #d34836;*/ /*red color*/
+  background-color: white;
+  border: #3b5998;
+  color:black;
+  font-color: white;
+  text-shadow: 0px 0px 0px;
+}
+#phonenumber{
+  /*background-color: #d34836;*/ /*red color*/
+  background-color: #64708A;
+  border: #3b5998;
+  color:white;
+  font-color: white;
+  text-shadow: 0px 0px 0px;
+}
+.fix-center{
+  /*border: 1px solid;*/
+  /*margin-top: 100px;*/
+  margin-bottom: auto;
+
+}
+#main-menu,
+#checkin-menu,
+#call-van-page,
+#history-menu,
+#report-menu,
+#news-menu,
+#station-menu,
+#contact-menu,
+#about-us-menu
+{
+  height: 100%;
+  background-color: #21252b;
+}
+
+#first-page{
+  background-image: url("images/BG.png");
+  background-size:cover;
+
+}
+
+#login-page{
+  background-image: url("images/BG-LOGIN.png");
+  background-size:cover;
+}
+#van_logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:90%;
+  /*border: 1px solid;*/
+}
+#intro_message{
+  width:90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#powermap_logo{
+  width:30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tor95_logo{
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#panel_header{
+  padding-top:10%;
+  padding-bottom: 10%;
+  /*background-image:url("images/BG.png");*/
+  background-size:cover;
+  /*background-color: #1b1d23;*/ /*very black*/
+  background-color: #21252b; /*very dark blue*/
+
+}
+
+#map {
+  /*top: 60px;*/
+  position : fixed;
+  width:100%;
+  height: 100%;
+  z-index: 0;
+  left: 0;
+  /*overflow-y: scroll;
+  height: auto;*/
+  /*border: 1px solid;*/
+  /*
+  position : absolute;
+  bottom: 0;
+  right: 0;
+
+  t
+  */
+}
+#routing_inputs{
+  position : fixed;
+  width:90%;
+  top: 50px;
+}
+#top_down{
+  position : inherit;
+  width:100%;
+  top: 70px;
+}
+.btw_station::after{
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  content: '';
+  display: table;
+  clear: both;
+  margin-bottom: 2em;
+  padding: 1em 0;
+}
+.btw_bus{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-bottom: -50px;
+}
+.station_name{
+  text-shadow: 0px 0px 0px;
+  color: #4d4d4d;
+  /*border: 1px solid;*/
+}
+#upload-image{
+  width:160px;
+  height:160px;
+}
+.download-image{
+  width:200px;
+  height:200px;
+}
+.news-img{
+  width:80px;
+  height:80px;
+}
+
+#history-page-dialog,
+#news-page-dialog,
+#call-van-page
+{
+  padding-top:100px;
+}
+
+.dialog div{
+  /*background-color: #434343;*/ /*Gray Black color*/
+  /*background-color: #ea7323;*/
+  /*background-image:-webkit-gradient(linear,left top,left bottom,from( #f28740 ),to( #ea7323 ));*/
+  background-color: #1C232B;
+  z-index: 1040;
+}
+
+.dialog .ui-header{
+  /*background-color: #434343;*/ /*Gray Black color*/
+  background-color: #ea7323;/*dark gray*/
+  color: white;
+  text-shadow: 0px 0px 0px;
+  z-index: 1040;
+}
+
+div.flex-right-vertically{
+  padding: 10px 10px 10px 10px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+div.flex-center-vertically{
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.ui-icon-bars:after{
+  margin-top: 0px;
+  margin-left: 20px;
+}
+.ui-icon-me:after{
+  margin-top: 0px;
+  margin-right: 20px;
+}
+.ui-icon-carat-l:after, .ui-icon-navigation:after{
+  margin-top: 0px;
+  margin-left: 20px;
+}
+#skip_button{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid;
+  border-color: white;
+  /*width: 50%;*/
+  right: 0px;
+  padding-right: 10px;
+  margin-right: 0px;
+  text-shadow: 0px 0px 0px;
+  color: white;
+}
+[data-role="page"]{
+  position:fixed;
+  overflow: auto;
+  width: 100%;
+  top: 0px;
+}
+[data-role="header"]{
+  position:fixed;
+  width: 100%;
+  z-index: 1000;
+  overflow: auto;
+}
+[data-role="main"]{
+  width: 100%;
+}
+[data-role="navbar"]{
+  z-index: 10000;
+}
+
+div#news-menu.myPanel.ui-panel.ui-panel-position-left.ui-panel-display-overlay.ui-body-inherit.ui-panel-animate.ui-panel-open{
+  overflow-y: auto;
+}
+
+
+div.ui-content.slide.scroll_down{
+  /*position:absolute;
+  top:50px;*/
+  padding: 0px;
+}
+div.ui-content.scroll_down{
+  position:relative;
+}
+#station-div{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#first-header{
+position: fixed;
+top: 0px;
+width: 100%;
+background-color: rgba(0, 0, 0, 0);
+}
+
+/*-------- custom icon ----------*/
+.ui-icon-me:after{
+	background-image: url("images/me.png");
+  background-size: 18px 18px;
+}
+.ui-icon-myapp-settings:after{
+	background-image: url("images/Logo Van.png");
+  background-size: 18px 18px;
+}
+.ui-icon-facebook:after{
+	background-image: url("images/facebook-logo.png");
+  background-size: 20px 20px;
+}
+.ui-icon-google:after{
+	background-image: url("images/google-logo.png");
+  background-size: 20px 20px;
+}
+.ui-icon-car-request:after{
+	background-image: url("images/car request.png");
+  background-size: 20px 20px;
+}
+.ui-icon-checkin:after{
+	background-image: url("images/check in.png");
+  background-size: 20px 20px;
+}
+.ui-icon-history:after{
+	background-image: url("images/historys.png");
+  background-size: 20px 20px;
+}
+.ui-icon-station:after{
+	background-image: url("images/Station.png");
+  /*background-color:rgba(0,0,0,0.0);*/
+  background-size: 20px 20px;
+}
+.ui-icon-map-icon:after{
+	background-image: url("images/map_icon.png");
+  /*background-color:rgba(0,0,0,0.0);*/
+  background-size: 20px 20px;
+}
+.ui-icon-delete:after{
+  background-color: #F1654;
+}
+.ui-icon-check:after{
+  background-color: #2CC990;
+}
+#station_dep_icon.ui-icon-carat-r:after{
+  margin-top: 0px;
+  margin-right: 15px;
+}
+/*--------- Icon size ----------*/
+.ui-icon-me:after,
+.ui-icon-myapp-settings:after,
+.ui-icon-map-icon:after,
+.ui-icon-facebook:after,
+.ui-icon-google:after,
+.ui-icon-mail:after,
+.ui-icon-car-request:after,
+.ui-icon-checkin:after,
+.ui-icon-history:after,
+.ui-icon-station:after,
+.ui-icon-carat-r:after,
+.ui-icon-carat-l:after,
+.ui-icon-navigation:after,
+.ui-icon-bars:after,
+.ui-icon-cloud:after,
+.ui-icon-home:after,
+.ui-icon-phone:after,
+.ui-icon-user:after,
+.ui-icon-action:after,
+.ui-icon-info:after,
+.ui-icon-comment:after,
+.ui-icon-alert:after,
+.ui-icon-camera:after,
+.ui-icon-check:after,
+.ui-icon-delete:after,
+.ui-icon-carat-d:after
+{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+  /*border: 1px solid white;*/
+}
+
+/*Hr tag in login page*/
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: white;
+}
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}

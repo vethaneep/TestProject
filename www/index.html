@@ -9,6 +9,24 @@
   <script src="lib/onsenui/js/onsenui.min.js"></script>
   <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
 
+  <!-- Map-->
+  <link rel="stylesheet" href="css/map/leaflet.css">
+  <script src="js/map/leaflet1.0.3.js"></script>
+  <script type="text/javascript" src="js/map/leaflet.markercluster-src.js"></script>
+  <link rel="stylesheet" href="css/map/MarkerCluster.css"/>
+  <link rel="stylesheet" href="css/map/MarkerCluster.Default.css"/>
+  <!-- Rotage Marker-->
+  <script type="text/javascript" src="js/map/leaflet.rotatedMarker.js"></script>
+  <!-- Leaflet search-->
+  <link rel="stylesheet" href="css\map\leaflet-search.css">
+  <script src="js\map\leaflet-search.js"></script>
+  <!--<script src="geoJson\dataPoi.geojson"></script>-->
+  <!-- Leaflet Realtime-->
+  <script src="js\leaflet-realtime.js"></script>
+  <!-- Account Kit for Authenticate By Phone number and email-->
+  <!--<script src="js\accountkit.sdk.js"></script>
+  <script src="js\authentication.js"></script>-->
+
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
@@ -32,6 +50,27 @@
             });
         };
     });
+
+    document.addEventListener("deviceready", function(){
+
+     var onSuccess = function(position){
+      document.getElementById("show_position").innerHTML =
+       "Longitude:" + position.coords.longitude + "\n" +
+       "Latitude:" + position.coords.latitude;
+     };
+
+     var onError = function(message){
+      alert("Failed to get the current position.");
+     };
+
+     var option = {
+      frequency: 5000,
+      timeout: 6000
+     };
+
+     navigator.geolocation.getCurrentPosition(onSuccess, onError, option);
+
+   });
   </script>
 </head>
 <body>
@@ -40,13 +79,13 @@
       <ons-page>
         <ons-list>
           <ons-list-item ng-click="splitter.load('home.html')" tappable>
-            Home
+            หน้าแรก
           </ons-list-item>
           <ons-list-item ng-click="splitter.load('settings.html')" tappable>
-            Settings
+            เรียกรถ
           </ons-list-item>
           <ons-list-item ng-click="splitter.load('about.html')" tappable>
-            About
+            รายงาน
           </ons-list-item>
         </ons-list>
       </ons-page>
@@ -66,9 +105,8 @@
           Main
         </div>
       </ons-toolbar>
-      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-        Swipe right to open the menu!
-      </p>
+      <div id="map"></div> <!-- Map -->
+      Position : <div id="show_position"></div>
     </ons-page>
   </ons-template>
 
@@ -81,9 +119,10 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Settings
+          เรียกรถ
         </div>
       </ons-toolbar>
+      <ons-button>large</ons-button>
     </ons-page>
   </ons-template>
 
@@ -101,6 +140,6 @@
       </ons-toolbar>
     </ons-page>
   </ons-template>
-
 </body>
+
 </html>
