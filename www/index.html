@@ -23,35 +23,82 @@
     ons.ready(function() {
         console.log("Onsen UI is ready!");
     });
+    ons.bootstrap()
+      .controller('SplitterController', function() {
+        this.load = function(page) {
+          mySplitter.content.load(page)
+            .then(function() {
+              mySplitter.left.close();
+            });
+        };
+    });
   </script>
 </head>
 <body>
-  <ons-navigator
-    var="navi"
-    page="page.html"
-    ng-controller="AppController as app"
-    ons-postpush="app.pushes = app.pushes + 1"
-    ons-postpop="app.pops = app.pops + 1">
-  </ons-navigator>
+  <ons-splitter var="mySplitter" ng-controller="SplitterController as splitter">
+    <ons-splitter-side side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item ng-click="splitter.load('home.html')" tappable>
+            Home
+          </ons-list-item>
+          <ons-list-item ng-click="splitter.load('settings.html')" tappable>
+            Settings
+          </ons-list-item>
+          <ons-list-item ng-click="splitter.load('about.html')" tappable>
+            About
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content page="home.html"></ons-splitter-content>
+  </ons-splitter>
 
-  <ons-template id="page.html">
+  <ons-template id="home.html">
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Back</ons-back-button>
+          <ons-toolbar-button ng-click="mySplitter.left.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
         </div>
-        <div class="center">Navigation</div>
+        <div class="center">
+          Main
+        </div>
       </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+        Swipe right to open the menu!
+      </p>
+    </ons-page>
+  </ons-template>
 
-      <section style="padding: 10px">
-        <ons-button ng-click="navi.pushPage('page.html')">
-          Push Page
-        </ons-button>
+  <ons-template id="settings.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="mySplitter.left.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Settings
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
 
-        <p>
-          You have pushed {{ app.pushes }} times and popped {{ app.pops }} times.
-        </p>
-      </section>
+  <ons-template id="about.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="mySplitter.left.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          About
+        </div>
+      </ons-toolbar>
     </ons-page>
   </ons-template>
 
